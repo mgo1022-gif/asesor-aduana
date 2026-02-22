@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría en Comercio Exterior | Gerardo Miño</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            light: '#4dabf7',
+                            DEFAULT: '#1c7ed6',
+                            dark: '#1864ab',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-earth-americas text-brand text-3xl mr-3"></i>
+                    <span class="font-bold text-xl text-slate-800 leading-tight">Gerardo Miño<br><span class="text-brand text-sm font-semibold uppercase tracking-wider">Consultoría Comex</span></span>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#planes" class="text-gray-600 hover:text-brand font-medium">Planes de Asesoría</a>
+                    <a href="#formulario" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-md">
+                        Agendar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 text-white mt-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-brand/20 text-brand-light px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-6 border border-brand/30">
+                <i class="fa-solid fa-lock mr-2"></i> Importa seguro y sin sorpresas
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                No arriesgues tu capital.<br>Planifica tu importación con un experto.
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Evita retenciones en aduana, multas y costos ocultos. Analizamos la viabilidad de tu mercadería 1 a 1 para que sepas exactamente cuánto vas a pagar y qué necesitas.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#planes" class="bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-brand/30">
+                    Ver Planes y Precios
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Por qué necesitas asesoría (Info de regímenes) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">¿Por qué es fundamental asesorarse?</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Importar a Argentina requiere cumplir normativas estrictas dependiendo del régimen. Un error de clasificación puede bloquear tu mercadería.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="border border-gray-100 bg-slate-50 p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-brand text-xl shrink-0">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800">Límites del Régimen Courier</h3>
+                        <p class="text-sm text-gray-600 mt-2">¿Sabías que si tu envío supera los <strong>50 kg por bulto</strong>, los <strong>USD 3000</strong>, o trae más de 3 unidades de la misma especie, pasa automáticamente a Régimen General y puede quedar retenido si no eres importador?</p>
+                    </div>
+                </div>
+                <div class="border border-gray-100 bg-slate-50 p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-brand text-xl shrink-0">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800">Intervenciones (Régimen General)</h3>
+                        <p class="text-sm text-gray-600 mt-2">Productos médicos, alimentos, textiles o electrónica requieren permisos previos (ANMAT, INAL, Seguridad Eléctrica). Analizamos la posición arancelaria antes de que compres.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y Precios -->
+    <section id="planes" class="py-20 bg-slate-100 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider uppercase text-sm">Tarifas Transparentes</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Elige tu plan de Asesoría 1 a 1</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Plan Courier -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 relative flex flex-col h-full">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-slate-800">Consultas Generales y Courier</h3>
+                        <p class="text-gray-500 mt-2 text-sm">Ideal para emprendedores, primeras importaciones, régimen simplificado y pequeños envíos.</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-slate-900">$120</span>
+                        <span class="text-gray-500 font-medium"> USD</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Análisis viabilidad Régimen Courier/Pequeños Envíos</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Cálculo estimado de impuestos aduaneros</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Resolución de dudas generales</span></li>
+                    </ul>
+                    <a href="#formulario" onclick="preselectPlan('Courier ($120)')" class="w-full block text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-colors">Seleccionar Plan</a>
+                </div>
+
+                <!-- Plan General (Destacado) -->
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative flex flex-col h-full transform md:-translate-y-4 border border-slate-700">
+                    <div class="absolute top-0 right-8 transform -translate-y-1/2">
+                        <span class="bg-green-400 text-slate-900 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                            Bonificable 100%
+                        </span>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white">Régimen General de Importación</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Para cargas de gran volumen, comerciales y mercadería con intervenciones aduaneras.</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">$150</span>
+                        <span class="text-gray-400 font-medium"> USD</span>
+                        <p class="text-green-400 text-sm font-semibold mt-2"><i class="fa-solid fa-gift mr-1"></i> El costo se descuenta íntegramente si realizas la operación con nosotros.</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Análisis de Terceros Organismos (ANMAT, INAL, etc.)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estructura de costos integral</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Asesoría sobre giros de divisas al exterior</span></li>
+                    </ul>
+                    <a href="#formulario" onclick="preselectPlan('Régimen General ($150)')" class="w-full block text-center bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-brand/40">Seleccionar Plan</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario para WhatsApp -->
+    <section id="formulario" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                <div class="bg-slate-900 p-8 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Reserva tu Asesoría</h2>
+                    <p class="text-gray-400 text-sm">Completa los datos de tu mercadería para que podamos analizarla previamente. Te contactaremos por WhatsApp para coordinar el pago y la reunión.</p>
+                </div>
+                
+                <form id="asesoriaForm" onsubmit="enviarWhatsApp(event)" class="p-8 space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Email -->
+                        <div class="col-span-1 md:col-span-2">
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Correo Electrónico *</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-solid fa-envelope text-gray-400"></i>
+                                </div>
+                                <input type="email" id="email" required class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="tu@email.com">
+                            </div>
+                        </div>
+
+                        <!-- Link -->
+                        <div class="col-span-1 md:col-span-2">
+                            <label for="link" class="block text-sm font-semibold text-slate-700 mb-2">Link del producto (Alibaba, Amazon, etc.) *</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-solid fa-link text-gray-400"></i>
+                                </div>
+                                <input type="url" id="link" required class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="https://...">
+                            </div>
+                        </div>
+
+                        <!-- Descripción -->
+                        <div class="col-span-1 md:col-span-2">
+                            <label for="descripcion" class="block text-sm font-semibold text-slate-700 mb-2">Descripción de la mercadería *</label>
+                            <textarea id="descripcion" required rows="3" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Ej: Repuestos de maquinaria textil, material de acero..."></textarea>
+                        </div>
+
+                        <!-- Cantidad -->
+                        <div>
+                            <label for="cantidad" class="block text-sm font-semibold text-slate-700 mb-2">Cantidad Estimada *</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-solid fa-boxes-stacked text-gray-400"></i>
+                                </div>
+                                <input type="text" id="cantidad" required class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Ej: 500 unidades / 2 pallets">
+                            </div>
+                        </div>
+
+                        <!-- Valor -->
+                        <div>
+                            <label for="valor" class="block text-sm font-semibold text-slate-700 mb-2">Valor Estimado (USD) *</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-solid fa-dollar-sign text-gray-400"></i>
+                                </div>
+                                <input type="number" id="valor" required class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Ej: 2500">
+                            </div>
+                        </div>
+                        
+                        <!-- Selección de Plan Oculto/Visible -->
+                        <div class="col-span-1 md:col-span-2 pt-2">
+                            <label for="plan_elegido" class="block text-sm font-semibold text-slate-700 mb-2">Plan de Asesoría Solicitado</label>
+                            <select id="plan_elegido" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all">
+                                <option value="Aún no estoy seguro">No estoy seguro, necesito orientación</option>
+                                <option value="Courier ($120)">Plan Consultas / Courier ($120 USD)</option>
+                                <option value="Régimen General ($150)">Plan Régimen General ($150 USD - Bonificable)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full mt-6 bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-green-500/30 transition-all flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Enviar a WhatsApp
+                    </button>
+                    <p class="text-center text-xs text-gray-400 mt-4"><i class="fa-solid fa-lock mr-1"></i> Tu información es confidencial. Al enviar, se abrirá tu WhatsApp para confirmar el mensaje.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="bg-slate-950 py-8 text-gray-400 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-semibold text-white mb-2">Gerardo Miño - Despachante de Aduana</p>
+            <p class="text-sm mb-4">Maipú 231 – 5th floor – Office: B | C.A.B.A - Buenos Aires, Argentina (C1084ABE)</p>
+            <p class="text-xs">&copy; 2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para enviar a WhatsApp -->
+    <script>
+        // Función para cambiar el selector si hacen clic en un plan de arriba
+        function preselectPlan(planName) {
+            document.getElementById('plan_elegido').value = planName;
+        }
+
+        function enviarWhatsApp(e) {
+            e.preventDefault(); // Evita que la página se recargue
+
+            // Obtener los datos del formulario
+            const email = document.getElementById('email').value;
+            const link = document.getElementById('link').value;
+            const descripcion = document.getElementById('descripcion').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const valor = document.getElementById('valor').value;
+            const plan = document.getElementById('plan_elegido').value;
+
+            // Tu número de WhatsApp (código de país + número, sin espacios ni símbolos)
+            const telefono = "541155010680";
+
+            // Armar el mensaje con formato para WhatsApp (*texto* = negrita)
+            let mensaje = `👋 Hola Gerardo, quiero reservar una asesoría.%0A%0A`;
+            mensaje += `📋 *Plan solicitado:* ${plan}%0A`;
+            mensaje += `📧 *Email de contacto:* ${email}%0A%0A`;
+            mensaje += `📦 *DATOS DE LA MERCADERÍA:*%0A`;
+            mensaje += `*Descripción:* ${descripcion}%0A`;
+            mensaje += `*Cantidad:* ${cantidad}%0A`;
+            mensaje += `*Valor estimado:* USD ${valor}%0A`;
+            mensaje += `*Link del producto:* ${link}%0A%0A`;
+            mensaje += `¿Cómo seguimos para el pago y coordinar la reunión?`;
+
+            // Crear el enlace y abrirlo en una nueva pestaña
+            const urlWhatsApp = `https://wa.me/${telefono}?text=${mensaje}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
