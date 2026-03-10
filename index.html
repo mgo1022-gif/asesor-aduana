@@ -118,15 +118,16 @@
                 <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4">Consultas Generales y Courier</h3>
                     <div class="mb-6">
-                        <span class="text-5xl font-extrabold text-slate-900">$120</span>
+                        <span class="text-5xl font-extrabold text-slate-900">$50</span>
                         <span class="text-gray-500 font-medium"> USD</span>
+                        <p class="text-slate-600 text-sm font-medium mt-2"><i class="fa-solid fa-money-bill-wave text-brand mr-1"></i> Se abona en pesos a valor dólar oficial</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Viabilidad Régimen Courier / Pequeños Envíos</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Cálculo de impuestos aduaneros</span></li>
                     </ul>
-                    <a href="#formulario" onclick="preselectPlan('Courier ($120)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
+                    <a href="#formulario" onclick="preselectPlan('Courier ($50)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
                 </div>
 
                 <!-- Plan General (Destacado) -->
@@ -141,6 +142,7 @@
                         <span class="text-5xl font-extrabold text-white">$150</span>
                         <span class="text-gray-400 font-medium"> USD</span>
                         <p class="text-green-400 text-sm font-semibold mt-2">Se descuenta si operas con nosotros</p>
+                        <p class="text-gray-300 text-sm font-medium mt-1"><i class="fa-solid fa-money-bill-wave text-brand-light mr-1"></i> Se abona en pesos a valor dólar oficial</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
                         <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
@@ -188,7 +190,7 @@
                         <div class="col-span-1 md:col-span-2">
                             <label class="block text-sm font-bold text-slate-700 mb-2">Plan solicitado</label>
                             <select id="plan_elegido" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand">
-                                <option value="Courier ($120)">Courier y Consultas Generales ($120)</option>
+                                <option value="Courier ($50)">Courier y Consultas Generales ($50)</option>
                                 <option value="Régimen General ($150)">Régimen General ($150 - Bonificable)</option>
                             </select>
                         </div>
