@@ -11,14 +11,233 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script>
-        // Forzar a que la página inicie siempre en la parte superior
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            light: '#4dabf7',
+                            DEFAULT: '#1c7ed6',
+                            dark: '#1864ab',
+                        }
+                    }
+                }
+            }
         }
-        window.addEventListener('load', function() {
-            window.scrollTo(0, 0);
-        });
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
 
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-earth-americas text-brand text-3xl mr-3"></i>
+                    <span class="font-bold text-xl text-slate-800 leading-tight">Gerardo Miño<br><span class="text-brand text-sm font-semibold uppercase tracking-wider">Despachante de Aduana Matriculado</span></span>
+                </div>
+                <!-- Icono de WhatsApp para celulares en el menú -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/541168731508" target="_blank" class="text-green-500 hover:text-green-600 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-4xl"></i>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#planes" class="text-gray-600 hover:text-brand font-medium">Planes de Asesoría</a>
+                    <a href="#formulario" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-md">
+                        Agendar Consulta
+                    </a>
+                    <a href="https://wa.me/541168731508" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Consultar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 text-white mt-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-brand/20 text-brand-light px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-6 border border-brand/30">
+                <i class="fa-solid fa-lock mr-2"></i> Importa seguro y sin sorpresas
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Planifica tu importación<br>con un despachante de aduana.
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Analizamos la viabilidad de tu mercadería 1 a 1 para que sepas exactamente qué necesitas antes de realizar la compra.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#planes" class="bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-brand/30">
+                    Ver Planes y Precios
+                </a>
+                <a href="https://wa.me/541168731508" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Hablar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Por qué necesitas asesoría -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">¿Por qué es fundamental asesorarse?</h2>
+                <div class="w-20 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="border border-gray-100 bg-slate-50 p-6 rounded-2xl flex items-start gap-4 shadow-sm">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-brand text-xl shrink-0">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800">Límites del Régimen Courier</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Puedes traer más de 3 unidades con fines comerciales, siempre que no superes los <strong>50 kg por bulto</strong> ni los <strong>USD 3000</strong>. La clave está en <strong>clasificar correctamente</strong> para evitar retenciones por intervenciones aduaneras.
+                        </p>
+                    </div>
+                </div>
+                <div class="border border-gray-100 bg-slate-50 p-6 rounded-2xl flex items-start gap-4 shadow-sm">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-brand text-xl shrink-0">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800">Intervenciones Aduaneras</h3>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Muchos productos requieren permisos de ANMAT, INAL o Seguridad Eléctrica. Analizamos la posición arancelaria antes de que compres para asegurar el ingreso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y Precios -->
+    <section id="planes" class="py-20 bg-slate-100 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-16">Elige tu modalidad de Asesoría</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Plan Courier -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Consultas Generales y Courier</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-slate-900">$50.000</span>
+                        <span class="text-gray-500 font-medium"> PESOS</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-left">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Viabilidad Régimen Courier / Pequeños Envíos</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Cálculo de impuestos aduaneros</span></li>
+                    </ul>
+                    <a href="#formulario" onclick="preselectPlan('Courier ($50.000)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
+                </div>
+
+                <!-- Plan General (Destacado) -->
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative flex flex-col h-full transform md:-translate-y-4 border border-slate-700">
+                    <div class="absolute top-0 right-8 transform -translate-y-1/2">
+                        <span class="bg-green-400 text-slate-900 text-xs font-bold uppercase py-1 px-3 rounded-full shadow-sm">
+                            Bonificable 100%
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Régimen General de Importación</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">$170.000</span>
+                        <span class="text-gray-400 font-medium"> PESOS</span>
+                        <p class="text-green-400 text-sm font-semibold mt-2">Se descuenta si operas con nosotros</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-left">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Reunión 1 a 1 (Videollamada o Presencial)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Análisis de Intervenciones (ANMAT, etc.)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estructura integral de costos</span></li>
+                    </ul>
+                    <a href="#formulario" onclick="preselectPlan('Régimen General ($170.000)')" class="w-full block bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-brand/40">Seleccionar Plan</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario para WhatsApp -->
+    <section id="formulario" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                <div class="bg-slate-900 p-8 text-center text-white">
+                    <h2 class="text-2xl font-bold mb-2">Reserva tu Asesoría</h2>
+                    <p class="text-gray-400 text-sm">Completa los datos que tengas y te contactaremos por WhatsApp para coordinar.</p>
+                </div>
+                
+                <form id="asesoriaForm" onsubmit="enviarWhatsApp(event)" class="p-8 space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico (Opcional)</label>
+                            <input type="text" id="email" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Link del producto (Opcional)</label>
+                            <input type="url" id="link" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="https://alibaba.com/...">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Descripción de la mercadería (Opcional)</label>
+                            <textarea id="descripcion" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="¿Qué estás trayendo y de qué material es?"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Cantidad (Opcional)</label>
+                            <input type="text" id="cantidad" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 100 unidades">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Valor Estimado USD (Opcional)</label>
+                            <input type="number" id="valor" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 1500">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Plan solicitado</label>
+                            <select id="plan_elegido" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand">
+                                <option value="Courier ($50.000)">Courier y Consultas Generales ($50.000)</option>
+                                <option value="Régimen General ($170.000)">Régimen General ($170.000 - Bonificable)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-lg flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Enviar a Gerardo Miño
+                    </button>
+                    
+                    <div class="text-center mt-4">
+                        <a href="https://wa.me/541168731508" target="_blank" class="inline-flex items-center text-slate-500 hover:text-green-600 font-medium transition-colors">
+                            <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> O escríbeme directamente sin formulario
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/541168731508" target="_blank" aria-label="Escribir por WhatsApp" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-transform transform hover:scale-110 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-10 text-gray-400 text-center border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-white mb-2">Gerardo Miño - Despachante de Aduana Matriculado</p>
+            <p class="text-sm">
+                Maipú 231 – 5th floor – Office: B<br>
+                C.A.B.A - Buenos Aires, Argentina (C1084ABE)
+            </p>
+        </div>
+    </footer>
+
+    <script>
         function preselectPlan(plan) { document.getElementById('plan_elegido').value = plan; }
         function enviarWhatsApp(e) {
             e.preventDefault();
