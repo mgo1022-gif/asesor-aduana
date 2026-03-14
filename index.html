@@ -42,10 +42,19 @@
                     <i class="fa-solid fa-earth-americas text-brand text-3xl mr-3"></i>
                     <span class="font-bold text-xl text-slate-800 leading-tight">Gerardo Miño<br><span class="text-brand text-sm font-semibold uppercase tracking-wider">Consultoría Comex</span></span>
                 </div>
+                <!-- Icono de WhatsApp para celulares en el menú -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/541168731508" target="_blank" class="text-green-500 hover:text-green-600 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-4xl"></i>
+                    </a>
+                </div>
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#planes" class="text-gray-600 hover:text-brand font-medium">Planes de Asesoría</a>
                     <a href="#formulario" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-md">
                         Agendar Consulta
+                    </a>
+                    <a href="https://wa.me/541168731508" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Consultar
                     </a>
                 </div>
             </div>
@@ -67,6 +76,9 @@
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#planes" class="bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-brand/30">
                     Ver Planes y Precios
+                </a>
+                <a href="https://wa.me/541168731508" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Hablar por WhatsApp
                 </a>
             </div>
         </div>
@@ -118,16 +130,15 @@
                 <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4">Consultas Generales y Courier</h3>
                     <div class="mb-6">
-                        <span class="text-5xl font-extrabold text-slate-900">$50</span>
-                        <span class="text-gray-500 font-medium"> USD</span>
-                        <p class="text-slate-600 text-sm font-medium mt-2"><i class="fa-solid fa-money-bill-wave text-brand mr-1"></i> Se abona en pesos a valor dólar oficial</p>
+                        <span class="text-5xl font-extrabold text-slate-900">$50.000</span>
+                        <span class="text-gray-500 font-medium"> PESOS</span>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Viabilidad Régimen Courier / Pequeños Envíos</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Cálculo de impuestos aduaneros</span></li>
                     </ul>
-                    <a href="#formulario" onclick="preselectPlan('Courier ($50)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
+                    <a href="#formulario" onclick="preselectPlan('Courier ($50.000)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
                 </div>
 
                 <!-- Plan General (Destacado) -->
@@ -139,17 +150,16 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Régimen General de Importación</h3>
                     <div class="mb-6">
-                        <span class="text-5xl font-extrabold text-white">$150</span>
-                        <span class="text-gray-400 font-medium"> USD</span>
+                        <span class="text-5xl font-extrabold text-white">$170.000</span>
+                        <span class="text-gray-400 font-medium"> PESOS</span>
                         <p class="text-green-400 text-sm font-semibold mt-2">Se descuenta si operas con nosotros</p>
-                        <p class="text-gray-300 text-sm font-medium mt-1"><i class="fa-solid fa-money-bill-wave text-brand-light mr-1"></i> Se abona en pesos a valor dólar oficial</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
                         <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Análisis de Intervenciones (ANMAT, etc.)</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estructura integral de costos</span></li>
                     </ul>
-                    <a href="#formulario" onclick="preselectPlan('Régimen General ($150)')" class="w-full block bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-brand/40">Seleccionar Plan</a>
+                    <a href="#formulario" onclick="preselectPlan('Régimen General ($170.000)')" class="w-full block bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-brand/40">Seleccionar Plan</a>
                 </div>
 
             </div>
@@ -162,36 +172,36 @@
             <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
                 <div class="bg-slate-900 p-8 text-center text-white">
                     <h2 class="text-2xl font-bold mb-2">Reserva tu Asesoría</h2>
-                    <p class="text-gray-400 text-sm">Completa los datos y te contactaremos para coordinar.</p>
+                    <p class="text-gray-400 text-sm">Completa los datos que tengas y te contactaremos por WhatsApp para coordinar.</p>
                 </div>
                 
                 <form id="asesoriaForm" onsubmit="enviarWhatsApp(event)" class="p-8 space-y-5">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="col-span-1 md:col-span-2">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico *</label>
-                            <input type="email" id="email" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="ejemplo@correo.com">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico (Opcional)</label>
+                            <input type="text" id="email" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="ejemplo@correo.com">
                         </div>
                         <div class="col-span-1 md:col-span-2">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Link del producto *</label>
-                            <input type="url" id="link" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="https://alibaba.com/...">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Link del producto (Opcional)</label>
+                            <input type="url" id="link" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="https://alibaba.com/...">
                         </div>
                         <div class="col-span-1 md:col-span-2">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Descripción de la mercadería *</label>
-                            <textarea id="descripcion" required rows="3" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="¿Qué estás trayendo y de qué material es?"></textarea>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Descripción de la mercadería (Opcional)</label>
+                            <textarea id="descripcion" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="¿Qué estás trayendo y de qué material es?"></textarea>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Cantidad *</label>
-                            <input type="text" id="cantidad" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 100 unidades">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Cantidad (Opcional)</label>
+                            <input type="text" id="cantidad" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 100 unidades">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Valor Estimado (USD) *</label>
-                            <input type="number" id="valor" required class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 1500">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Valor Estimado USD (Opcional)</label>
+                            <input type="number" id="valor" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 1500">
                         </div>
                         <div class="col-span-1 md:col-span-2">
                             <label class="block text-sm font-bold text-slate-700 mb-2">Plan solicitado</label>
                             <select id="plan_elegido" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand">
-                                <option value="Courier ($50)">Courier y Consultas Generales ($50)</option>
-                                <option value="Régimen General ($150)">Régimen General ($150 - Bonificable)</option>
+                                <option value="Courier ($50.000)">Courier y Consultas Generales ($50.000)</option>
+                                <option value="Régimen General ($170.000)">Régimen General ($170.000 - Bonificable)</option>
                             </select>
                         </div>
                     </div>
@@ -199,10 +209,21 @@
                     <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 rounded-xl transition-all shadow-lg flex items-center justify-center">
                         <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Enviar a Gerardo Miño
                     </button>
+                    
+                    <div class="text-center mt-4">
+                        <a href="https://wa.me/541168731508" target="_blank" class="inline-flex items-center text-slate-500 hover:text-green-600 font-medium transition-colors">
+                            <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> O escríbeme directamente sin formulario
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/541168731508" target="_blank" aria-label="Escribir por WhatsApp" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-transform transform hover:scale-110 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
 
     <!-- Footer -->
     <footer class="bg-slate-950 py-10 text-gray-400 text-center border-t border-slate-800">
@@ -219,13 +240,14 @@
         function preselectPlan(plan) { document.getElementById('plan_elegido').value = plan; }
         function enviarWhatsApp(e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const link = document.getElementById('link').value;
-            const desc = document.getElementById('descripcion').value;
-            const cant = document.getElementById('cantidad').value;
-            const val = document.getElementById('valor').value;
+            // Ahora si algún campo está vacío, dirá 'No especificado'
+            const email = document.getElementById('email').value || 'No especificado';
+            const link = document.getElementById('link').value || 'No especificado';
+            const desc = document.getElementById('descripcion').value || 'No especificado';
+            const cant = document.getElementById('cantidad').value || 'No especificado';
+            const val = document.getElementById('valor').value || 'No especificado';
             const plan = document.getElementById('plan_elegido').value;
-            const tel = "541155010680";
+            const tel = "541168731508";
             
             let msg = `📋 *Nueva Solicitud de Asesoría*%0A%0A`;
             msg += `*Plan:* ${plan}%0A*Email:* ${email}%0A%0A`;
