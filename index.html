@@ -124,43 +124,67 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-16">Elige tu modalidad de Asesoría</h2>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Ajustamos la grilla para 1 columna en móvil/tablet y 3 en escritorio para perfecta simetría -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                 
                 <!-- Plan Courier -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Consultas Generales y Courier</h3>
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full text-center">
+                    <div class="min-h-[4rem] flex items-center justify-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-800">Consultas Generales y Courier</h3>
+                    </div>
                     <div class="mb-6">
-                        <span class="text-5xl font-extrabold text-slate-900">$50.000</span>
+                        <span class="text-4xl lg:text-5xl font-extrabold text-slate-900">$50.000</span>
                         <span class="text-gray-500 font-medium"> PESOS</span>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Viabilidad Régimen Courier / Pequeños Envíos</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i> <span class="text-gray-600">Cálculo de impuestos aduaneros</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Reunión 1 a 1 (Videollamada)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Viabilidad Régimen Courier</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Cálculo de impuestos aduaneros</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Soporte y seguimiento</span></li>
                     </ul>
-                    <a href="#formulario" onclick="preselectPlan('Courier ($50.000)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all">Seleccionar Plan</a>
+                    <a href="#formulario" onclick="preselectPlan('Courier ($50.000)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all mt-auto">Seleccionar Plan</a>
                 </div>
 
-                <!-- Plan General (Destacado) -->
-                <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative flex flex-col h-full transform md:-translate-y-4 border border-slate-700">
-                    <div class="absolute top-0 right-8 transform -translate-y-1/2">
-                        <span class="bg-green-400 text-slate-900 text-xs font-bold uppercase py-1 px-3 rounded-full shadow-sm">
+                <!-- Plan General (Destacado en el centro) -->
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative flex flex-col h-full transform lg:-translate-y-4 border border-slate-700 text-center z-10">
+                    <div class="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 w-full text-center lg:right-8 lg:translate-x-0 lg:text-right lg:w-auto">
+                        <span class="bg-green-400 text-slate-900 text-xs font-bold uppercase py-1 px-3 rounded-full shadow-sm whitespace-nowrap">
                             Bonificable 100%
                         </span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Régimen General de Importación</h3>
+                    <div class="min-h-[4rem] flex items-center justify-center mb-4">
+                        <h3 class="text-2xl font-bold text-white">Régimen General de Importación</h3>
+                    </div>
                     <div class="mb-6">
-                        <span class="text-5xl font-extrabold text-white">$170.000</span>
+                        <span class="text-4xl lg:text-5xl font-extrabold text-white">$170.000</span>
                         <span class="text-gray-400 font-medium"> PESOS</span>
                         <p class="text-green-400 text-sm font-semibold mt-2">Se descuenta si operas con nosotros</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow text-left">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Reunión 1 a 1 (Videollamada o Presencial)</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Análisis de Intervenciones (ANMAT, etc.)</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3"></i> <span class="text-gray-300">Estructura integral de costos</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-300">Reunión 1 a 1 (Virtual/Presencial)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-300">Estudio de Posición Arancelaria</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-300">Análisis de Intervenciones</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-light mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-300">Estructura integral de costos</span></li>
                     </ul>
-                    <a href="#formulario" onclick="preselectPlan('Régimen General ($170.000)')" class="w-full block bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-brand/40">Seleccionar Plan</a>
+                    <a href="#formulario" onclick="preselectPlan('Régimen General ($170.000)')" class="w-full block bg-brand hover:bg-brand-light text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-brand/40 mt-auto">Seleccionar Plan</a>
+                </div>
+
+                <!-- Nuevo: Plan Alta de Importador -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col h-full text-center">
+                    <div class="min-h-[4rem] flex items-center justify-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-800">Alta de Importador</h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl lg:text-5xl font-extrabold text-slate-900">$100.000</span>
+                        <span class="text-gray-500 font-medium"> PESOS</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-left">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Gestión completa de registro</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-clock text-brand mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600 font-semibold">Demora máxima: 30 días</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Acompañamiento paso a paso</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-3 w-5 text-center"></i> <span class="text-gray-600">Preparación para operar</span></li>
+                    </ul>
+                    <a href="#formulario" onclick="preselectPlan('Alta de Importador ($100.000)')" class="w-full block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl transition-all mt-auto">Seleccionar Plan</a>
                 </div>
 
             </div>
@@ -172,7 +196,7 @@
         <div class="max-w-3xl mx-auto px-4">
             <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
                 <div class="bg-slate-900 p-8 text-center text-white">
-                    <h2 class="text-2xl font-bold mb-2">Reserva tu Asesoría</h2>
+                    <h2 class="text-2xl font-bold mb-2">Reserva tu Asesoría o Alta</h2>
                     <p class="text-gray-400 text-sm">Completa los datos que tengas y te contactaremos por WhatsApp para coordinar.</p>
                 </div>
                 
@@ -199,9 +223,10 @@
                             <input type="number" id="valor" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand" placeholder="Ej: 1500">
                         </div>
                         <div class="col-span-1 md:col-span-2">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Plan solicitado</label>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Plan o Servicio solicitado</label>
                             <select id="plan_elegido" class="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-brand">
                                 <option value="Courier ($50.000)">Courier y Consultas Generales ($50.000)</option>
+                                <option value="Alta de Importador ($100.000)">Alta de Importador ($100.000 - Max. 30 días)</option>
                                 <option value="Régimen General ($170.000)">Régimen General ($170.000 - Bonificable)</option>
                             </select>
                         </div>
@@ -238,10 +263,14 @@
     </footer>
 
     <script>
-        function preselectPlan(plan) { document.getElementById('plan_elegido').value = plan; }
+        function preselectPlan(plan) { 
+            // Forzamos a que haga scroll suave hacia el formulario
+            document.getElementById('plan_elegido').value = plan; 
+        }
+        
         function enviarWhatsApp(e) {
             e.preventDefault();
-            // Ahora si algún campo está vacío, dirá 'No especificado'
+            // Si algún campo está vacío, dirá 'No especificado'
             const email = document.getElementById('email').value || 'No especificado';
             const link = document.getElementById('link').value || 'No especificado';
             const desc = document.getElementById('descripcion').value || 'No especificado';
@@ -250,9 +279,9 @@
             const plan = document.getElementById('plan_elegido').value;
             const tel = "541168731508";
             
-            let msg = `📋 *Nueva Solicitud de Asesoría*%0A%0A`;
-            msg += `*Plan:* ${plan}%0A*Email:* ${email}%0A%0A`;
-            msg += `*MERCADERÍA:*%0A*Desc:* ${desc}%0A*Cant:* ${cant}%0A*Valor:* USD ${val}%0A*Link:* ${link}`;
+            let msg = `📋 *Nueva Solicitud - Gerardo Miño*%0A%0A`;
+            msg += `*Servicio Seleccionado:* ${plan}%0A*Email:* ${email}%0A%0A`;
+            msg += `*MERCADERÍA / DETALLES:*%0A*Desc:* ${desc}%0A*Cant:* ${cant}%0A*Valor:* USD ${val}%0A*Link:* ${link}`;
             
             window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
         }
